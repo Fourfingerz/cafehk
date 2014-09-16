@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 	end
 
 	def show
+		#May add detailed food item page if you so please 
 	end
 
 	def new

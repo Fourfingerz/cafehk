@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 categories = Category.create([
-		{ name: 'Starters'}, {name: 'Sizzling Platters'}, {name: 'Lunch Specials'},
-		{ name: 'Noodles/Rice'}, { name: 'Poultry'}, { name: 'Pork'},
-		{ name: 'Beef'}, {name: 'Vegetable'}, {name: 'Seafood'}, {name: 'Beverages'}
+		{ itemname: 'Starters'}, {itemname: 'Sizzling Platters'}, {itemname: 'Lunch Specials'},
+		{ itemname: 'Noodles/Rice'}, { itemname: 'Poultry'}, { itemname: 'Pork'},
+		{ itemname: 'Beef'}, {itemname: 'Vegetable'}, {itemname: 'Seafood'}, {itemname: 'Beverages'}
 	])
 
 # create 50 items, with random itemnames, and
@@ -19,6 +19,6 @@ for i in 0..49
 	price = Faker::PhoneNumber.subscriber_number(2)
 
 	# randomly assign one of the categories we just created
-	category = Category.all.sample
+	category = Category.first(offset: rand(Category.count))
 	a = Item.create(itemname: itemname, price: price, categories: [category,])
 end

@@ -1,1 +1,6 @@
 <h1>This is the index view for Items</h1>
+<% @items.each do |item| %>
+	<div>
+		<h3><%= item.itemname %></h3><h3><%= item.price %></h3>
+	</div>
+<% end %>

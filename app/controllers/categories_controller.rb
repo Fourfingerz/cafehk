@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def show
-		#May add detailed food item page if you so please 
+		@category = Category.find(params[:id])
 	end
 
 	def new

@@ -1,0 +1,14 @@
+<h1>This is the show view for Categories</h1>
+<h1><%= @category.name %></h1>
+ <ul>
+ 	<% @category.items.order(:itemname).each do |item| %>
+ 		<h4 align="left">
+ 	  	<%= link_to item.itemname, item %>
+ 	  </h4>
+ 	<% end %>
+ 	<% @category.items.order(:price).each do |item| %>
+ 		<h4 align="right">
+ 		<%= link_to item.price, item %>
+ 		</h4>
+ 	<% end %>
+ </ul>

@@ -28,6 +28,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'faker'
+
+gem 'devise'
+
+# Sets up admin accounts
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

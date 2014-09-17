@@ -1,7 +1,7 @@
-class ItemsController < ApplicationController
+class CategoriesController < ApplicationController
 	def index
 		#This is temporary
-		@items = Item.all
+		@categories = Category.all
 	end
 
 	def show

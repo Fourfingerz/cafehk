@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cafehk</title>
+  <title>Cafe Hong Kong</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-md-3">
+    	<p> Testing 123 Sidebar </p>
+      <!--Sidebar content-->
+    </div>
+    <div class="col-md-9">
+    	<%= yield %>
+      <!--Body content-->
+    </div>
+  </div>
+</div>
+  <%# do NOT delete below #%>
 
 <% if notice %>
 	<p class="alert alert-success"><%= notice %></p>
@@ -14,7 +28,6 @@
 <% if alert %>
 	<p class="alert alert-danger"><%= alert %></p>
 <% end %>
-<%= yield %>
 
 </body>
 </html>

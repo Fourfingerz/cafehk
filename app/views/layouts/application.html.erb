@@ -5,9 +5,22 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device=width, initial-scale=1.0">
 </head>
 <body>
+	<!-- Top Nav Bar -->
+	<div class="navbar navbar-default" role="navigation">
+    	<div class="navbar-inner">
+      	<div class="container-fluid">
+      		<%= link_to "Home", root_path, :class => "brand" %>
+        	<%= link_to "Food Menu", categories_path, :class => "brand" %>
+        	<!-- Google Maps API for Restaurant Location -->
+        	<%= link_to "Location", categories_path, :class => "brand" %>
+      	</div>
+    </div>
+  </div>
 
+	<!-- Left Side Bar -->
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="col-md-3">
@@ -17,8 +30,9 @@
     		<p align="center"> Mon-Sun 11am-11pm </p>
     	</div>
       <!--Sidebar content-->
-
     </div>
+
+
     <div class="col-md-9">
     	<%= yield %>
       <!--Body content-->

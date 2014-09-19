@@ -2,7 +2,14 @@
 <html>
 <head>
   <title>Cafe Hong Kong</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="assets/stylesheets/application.css">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device=width, initial-scale=1.0">
@@ -15,7 +22,7 @@
       		<%= link_to "Home", root_path, :class => "brand" %>
         	<%= link_to "Food Menu", categories_path, :class => "brand" %>
         	<!-- Google Maps API for Restaurant Location -->
-        	<%= link_to "Location", categories_path, :class => "brand" %>
+        	<%= link_to "Location", maps_path, :class => "brand" %>
       	</div>
     </div>
   </div>
@@ -23,7 +30,7 @@
 	<!-- Left Side Bar -->
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="col-md-3">
+    <div class="darkredBG col-md-3">
     		<%= image_tag("Logo.jpg") %>
     		<p align="center">(212)608-5359</p>
     		<p align="center"> 51 Bayard St. New York, NY 10013 </p>
@@ -47,6 +54,9 @@
 <% if alert %>
 	<p class="alert alert-danger"><%= alert %></p>
 <% end %>
+	
+	<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </body>
 </html>
